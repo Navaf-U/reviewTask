@@ -7,7 +7,7 @@ function DataFetch() {
     useEffect(()=>{
         const fetchingData = async()=>{
             const {data} = await axios.get("https://jsonplaceholder.typicode.com/posts")
-            setProducts(data)
+            setProducts(data.slice(0,9))
         }
         fetchingData()
     },[])  
